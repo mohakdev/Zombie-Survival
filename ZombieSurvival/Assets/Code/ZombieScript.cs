@@ -16,6 +16,6 @@ public class ZombieScript : MonoBehaviour
     void Update()
     {
         transform.LookAt(player.transform);
-        transform.Translate(Vector3.forward * Time.deltaTime * walkSpeed);
+        transform.Translate(Time.deltaTime * walkSpeed * Vector3.forward);
     }
 }

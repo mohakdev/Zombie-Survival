@@ -277,6 +277,7 @@ GameObject:
   m_Component:
   - component: {fileID: 648829432}
   - component: {fileID: 648829433}
+  - component: {fileID: 648829434}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
@@ -352,10 +353,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 56
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &648829434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648829431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9fecba982be98d46979ccbc6b49c846, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -984,6 +997,7 @@ GameObject:
   - component: {fileID: 1770131098}
   - component: {fileID: 1770131099}
   - component: {fileID: 1770131100}
+  - component: {fileID: 1770131101}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1040,6 +1054,18 @@ MonoBehaviour:
   speed: 12
   jumpHeight: 3
   gravity: -9.81
+--- !u!114 &1770131101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770131097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 489a922b1171d7f4d92d06654df268d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1880362293
 GameObject:
   m_ObjectHideFlags: 0

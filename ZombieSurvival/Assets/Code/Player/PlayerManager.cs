@@ -10,16 +10,15 @@ namespace RadiantGames.ZombieSurvival
     {
         public delegate void healthDelegate(int health);
         public event healthDelegate OnHealthChanged;
-        private void Start()
+        private void Awake()
         {
-            InitializeStats(10, 100);
+            InitializeStats(12, 100);
         }
 
         public override void TakeDamage(int Amount)
         {
             base.TakeDamage(Amount);
-            Debug.Log(Health);
-            OnHealthChanged?.Invoke(Health);
+            OnHealthChanged?.Invoke(Health); //Invoking a event to update the UI
         }
         
     }

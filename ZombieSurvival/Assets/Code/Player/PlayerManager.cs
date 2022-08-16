@@ -7,17 +7,23 @@ using UnityEngine;
 namespace RadiantGames.ZombieSurvival
 {
     public class PlayerManager : Character
-    {
+    {   
         public delegate void healthDelegate(int health);
         public event healthDelegate OnHealthChanged;
+
+        ShieldScript shield;
+        [SerializeField] int shieldPercent;
+        
         private void Awake()
         {
             InitializeStats(12, 100);
+            shield = gameObject.GetComponent<ShieldScript>();
         }
 
-        public override void TakeDamage(int Amount)
+        public override void TakeDamage(int amount)
         {
-            base.TakeDamage(Amount);
+            float totalDamage = amount - shield.ShieldCharacter(amount, shieldPercent);
+            base.TakeDamage((int)totalDamage);
             OnHealthChanged?.Invoke(Health); //Invoking a event to update the UI
         }
         

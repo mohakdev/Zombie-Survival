@@ -993,6 +993,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2132942570, guid: 57d9276ae54656c44bfd71c29454bbd6, type: 3}
+      propertyPath: damage
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 2583095765539804747, guid: 57d9276ae54656c44bfd71c29454bbd6, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1055,6 +1059,7 @@ GameObject:
   - component: {fileID: 1770131099}
   - component: {fileID: 1770131101}
   - component: {fileID: 1770131100}
+  - component: {fileID: 1770131102}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1121,6 +1126,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 489a922b1171d7f4d92d06654df268d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shieldPercent: 20
+--- !u!114 &1770131102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770131097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d854e93a95553fc4dba5181f03789511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1880362293

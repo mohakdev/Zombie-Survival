@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 724476239202018012}
   - component: {fileID: 4428367086909868657}
+  - component: {fileID: 5275338812977617855}
   m_Layer: 0
   m_Name: Pistol
   m_TagString: PickObject
@@ -45,6 +46,25 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.3
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5275338812977617855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049394835234996489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15fa5884d913c48419b11087ab26ff55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  spread: 0
+  reloadTime: 0
+  fireRate: 0
+  magazineSize: 0
+  bulletsPerTap: 0
+  isAutomatic: 0
 --- !u!1001 &4428367087059384068
 PrefabInstance:
   m_ObjectHideFlags: 0

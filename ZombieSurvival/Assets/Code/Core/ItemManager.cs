@@ -34,6 +34,8 @@ namespace RadiantGames.ZombieSurvival
             {
                 objectToPick.transform.SetParent(itemManager.transform);
                 objectToPick.transform.localPosition = new Vector3(0.38f, 0.45f, 0.5f);
+                hintText.text = "";
+                objectToPick.tag = "Untagged";
                 //objectToPick.transform.localRotation = Quaternion.Euler(0, 180, 0);
             }
         }

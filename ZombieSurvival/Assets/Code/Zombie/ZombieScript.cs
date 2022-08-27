@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace RadiantGames.ZombieSurvival
 {
-    public class ZombieScript : MonoBehaviour
+    public class ZombieScript : Character
     {
         GameObject player;
         PlayerManager playerScript;
@@ -13,6 +13,7 @@ namespace RadiantGames.ZombieSurvival
         [SerializeField] int damage;
         void Start()
         {
+            InitializeStats(walkSpeed, 100);
             player = GameObject.FindGameObjectWithTag("Player");
             playerScript = player.GetComponent<PlayerManager>();
             zombieAnim = GetComponent<Animator>();

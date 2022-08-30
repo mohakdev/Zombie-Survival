@@ -10,17 +10,15 @@ namespace RadiantGames.ZombieSurvival
         [Header("Gun Stats")]
         public int damage;
         public float  spread, reloadTime, fireRate;
-        public int magazineSize, bulletsPerTap;
-        public bool isAutomatic;
-        int ammo, bulletsShot;
+        public int magazineSize, bulletsPerTap ;
+        public bool isAutomatic ;
+        int  bulletsShot;
         float nextTimeToFire;
+        [HideInInspector] public int ammo;
+        [HideInInspector] public bool isReloading;
 
         //bools 
-        bool isReloading , isShooting ,  readyToShoot = true;
-
-        //UI Variables
-        //public delegate void gunDelegate(string name, int ammo, int magzineSize, bool isReloading);
-        //public event gunDelegate gunStatsUI;
+        bool isShooting ,  readyToShoot = true;
 
         //Other variables
         Camera fpsCam;

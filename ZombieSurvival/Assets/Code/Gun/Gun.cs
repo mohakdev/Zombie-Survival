@@ -16,7 +16,11 @@ namespace RadiantGames.ZombieSurvival
         float nextTimeToFire;
 
         //bools 
-        bool isReloading , isShooting , readyToShoot = true;
+        bool isReloading , isShooting ,  readyToShoot = true;
+
+        //UI Variables
+        //public delegate void gunDelegate(string name, int ammo, int magzineSize, bool isReloading);
+        //public event gunDelegate gunStatsUI;
 
         //Other variables
         Camera fpsCam;
@@ -59,6 +63,7 @@ namespace RadiantGames.ZombieSurvival
         void Shoot()
         {
             readyToShoot = false;
+            ammo -= bulletsPerTap;
             for (int i = 0; i <= bulletsPerTap; i++)
             { 
                 RaycastHit hit;
@@ -70,7 +75,6 @@ namespace RadiantGames.ZombieSurvival
                     Debug.Log(hit.transform.GetComponent<ZombieScript>().Health);
                 }
             }
-            ammo -= bulletsPerTap;
             Invoke(nameof(ResetShootState), fireRate);
         }
 

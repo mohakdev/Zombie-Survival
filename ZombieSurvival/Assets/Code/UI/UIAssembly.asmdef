@@ -2,7 +2,8 @@
     "name": "UIAssembly",
     "rootNamespace": "",
     "references": [
-        "GUID:af9d77ba70931a14891c031c64cb4962"
+        "GUID:af9d77ba70931a14891c031c64cb4962",
+        "GUID:c10b1224853e08d4f9dd9a24925d7f62"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

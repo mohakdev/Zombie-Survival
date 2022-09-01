@@ -11,6 +11,7 @@ namespace RadiantGames.ZombieSurvival
         [SerializeField] GameObject itemManager;
         GameObject nearColliderObj; //This is the gameobject which has the near collider which checks player is near
         GameObject gunEquipped;
+        Gun gunScript;
 
         bool isNear;
         void OnTriggerEnter(Collider other)
@@ -45,12 +46,15 @@ namespace RadiantGames.ZombieSurvival
                 DropGun();
             }
             gunEquipped = nearColliderObj.transform.parent.gameObject;
+            gunScript = gunEquipped.GetComponent<Gun>();
+
             hintText.text = "";
             if (gunEquipped.GetComponent<Rigidbody>() != null)
             {
                 gunEquipped.GetComponent<Rigidbody>().isKinematic = true;
             }
             nearColliderObj.tag = "Untagged";
+            gunScript.isEquipped = true; //Letting the gun know that it is equipped
 
             gunEquipped.transform.SetParent(itemManager.transform);
             gunEquipped.transform.localPosition = new Vector3(0.38f, 0.45f, 0.5f);
@@ -63,6 +67,7 @@ namespace RadiantGames.ZombieSurvival
             {
                 gunEquipped.GetComponent<Rigidbody>().isKinematic = false;
             }
+            gunScript.isEquipped = false; //Letting the gun know that it is unequipped
             nearColliderObj.tag = "GunNearCollider";
         }
 
